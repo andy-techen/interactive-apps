@@ -1,6 +1,6 @@
 body {
     margin: 5rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 h2 {
@@ -24,23 +24,24 @@ header {
 }
 
 .subtitle {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
     color: #4467a6;
 }
 
 .profile {
     display: inline-block;
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     overflow: hidden;
     border-radius: 50%;
+    animation: slide-in 1s;
 }
 
 .profile img {
     width: 100%;
     height: auto;
-    margin-top: -60px;
+    margin-top: -30%;
 }
 
 .contact-info {
@@ -53,3 +54,32 @@ header {
     color: #000000;
     text-decoration: none;
 }
+
+@keyframes slide-in {
+    0% {transform: translateX(-1000%);}
+    100% {transform: translateX(0%);}
+}
+
+@media screen and (max-width: 750px) {
+    body {
+        font-size: 2vw;
+        margin: 10vw;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5vh;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile {
+        width: 35vw;
+        height: 35vw;
+    }
+  }
